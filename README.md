@@ -74,5 +74,19 @@ Describe: mostUsedWords()
 Test: "It should return the word and count of 1 for one word."
 Code:
 const text = "hello";
-wordCounter(text);
+mostUsedWords(text);
 Expected Output: hello: 1
+
+Test: "It should return the word and count of 2 for two occurences of the same word."
+Code:
+const text = "hello hello";
+mostUsedWords(text);
+Expected Output: hello: 2
+
+Describe: offensive()
+
+Test: "It should exclude the word 'zoinks' if entered into text."
+code:
+const text = "You are such a zoinks.";
+offensive(text);
+Expected Output; "You are such a.";
