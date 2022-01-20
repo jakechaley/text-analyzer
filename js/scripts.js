@@ -92,18 +92,38 @@ function mostUsedWords (text) {
     let wordArray = text.toLowerCase().split(" ");
     let newArray = [];
     wordArray.forEach(function(word) {
-      if (!word.includes("zoinks")) { 
+      if (word !== "zoinks" && word !== "muppeteer" && word !== "biffaroni" && word !== "loopdaloop") { 
         newArray.push(word);
-      } else if (!word.includes("muppeteer")) { 
-        newArray.push(word);
-      // } else if (!word.includes("biffaroni")) { 
-      //   newArray.push(word);
-      // } else if (!word.includes("loopdaloop")) { 
-      //   newArray.push(word);
       }
-    return newArray;
     })
+    return newArray.join(" ");
   }
+
+
+  // function firstInstanceOfWord(word, text) {
+  //   const textArray = text.split(" ");
+  //   for (let i = 0; i < textArray.length; i++) {
+  //     console.log(i);
+  //     if (word === textArray[i]) {
+  //       return i;
+  //     }
+  //   }
+  //   return -1;
+  // }  
+// FOR LOOP EXAMPLE
+
+// function firstInstanceOfWord(word, text) {
+//   const textArray = text.split(" ");
+//   let position = -1;
+//   textArray.forEach(function(element, index) {
+//     console.log(index);
+//     if ((word === element) && (position === -1)) {
+//       position = index;
+//     }
+// });
+// return position;
+// }
+//FOREACH EXAMPLE
 
 // UI Logic
 
